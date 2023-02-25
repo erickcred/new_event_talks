@@ -1,0 +1,64 @@
+@use "variaveis";
+
+.event {
+    
+    &--frontend {
+        @include variaveis.gradientOne();
+    }
+    &--ui-ux {
+        @include variaveis.gradientTwo();
+    }
+    &--data-sience {
+        @include variaveis.gradientThree();
+    }
+    &--backend {
+        @include variaveis.gradientFour();
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+        &__details {
+            margin-left: 40px;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__details {
+
+        &__title {
+            @include variaveis.title(18px);
+        }
+
+        &__description {
+            @include variaveis.textDescription();
+            text-align: justify;
+        }
+    }
+
+    &__image {
+        max-width: 360px;
+        max-height: 180px;
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__details {
+            margin: 0 0 16px 0;
+
+        }
+
+        &__image {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}

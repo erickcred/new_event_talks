@@ -1,5 +1,7 @@
+@use "../variaveis";
+
 .infos-bar {
-    background-color: #fff;
+    background-color: variaveis.$corTextoPrincipal;
     display: flex;
     justify-content: space-between;
     padding: 16px 24px; 
@@ -10,10 +12,10 @@
         
         &__item {
             font-size: 14px;
-            color: #000;
+            color: variaveis.$corTextoSecundario;
 
             b {
-                color: #000;
+                color: variaveis.$corTextoSecundario;
                 display: block;
                 font-size: 18px;
             }

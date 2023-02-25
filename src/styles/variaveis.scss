@@ -2,5 +2,42 @@
 
 $corDeFundo: #1E1E1E;
 $corTextoPrincipal: #fff;
+$corTextoSecundario: #000 ;
+
+$blue1: #1b6ca7;
+$blue2: #442bdb;
+$pink1: #89223b;
+$yellow1: #9c791b;
+$purple: #4f2ac3;
 
 $fontRoboto: "Roboto", sans-serif;
+
+@mixin title($fontSize: 18px) {
+    font-size: $fontSize;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+@mixin textDescription($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 6px;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    font-weight: bolder;
+    line-height: $fontSize + 16px;
+}
+
+@mixin gradientOne() {
+    background-image: linear-gradient($blue1, $blue2);
+}
+@mixin gradientTwo() {
+    background-image: linear-gradient($blue2, $pink1);
+}
+@mixin gradientThree() {
+    background-image: linear-gradient($pink1, $yellow1);
+}
+@mixin gradientFour() {
+    background-image: linear-gradient($yellow1, $pink1);
+}
